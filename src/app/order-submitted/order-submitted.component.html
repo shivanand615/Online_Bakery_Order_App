@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-5 m-lg-5">
+        <mat-card>
+            <h1 class="dot col-sm-12" style="color: red;">Congrats, Your Order is Successfully placed.</h1>
+            <h2>Order Details</h2>
+            <div id="div">
+                <p>Order date:</p>
+                <h3>{{order.orderDate}}</h3>
+            </div>
+            <div id="div">
+                <p>Order Id:</p>
+                <h3>{{order.id}}</h3>
+            </div>
+            <div id="div">
+                <p>Ordered Product:</p>
+                <h3>{{order.itemName}}</h3>
+            </div>
+            <div id="div">
+                <p>Quantity</p>
+                <h3>{{order.quantity}}</h3>
+            </div>
+            <h2>Shipping Details</h2>
+            <div id="div">
+                <p>Customer Name:</p>
+                <h3>{{order.name}}</h3>
+            </div>
+            <div id="div">
+                <p>Customer Email:</p>
+                <h3>{{order.email}}</h3>
+            </div>
+            <div id="div">
+                <p>Customer Mobile number:</p>
+                <h3>{{order.phone}}</h3>
+            </div>
+            <div id="div">
+                <p>Delivery Address:</p>
+                <h3>{{order.address.street}},{{order.address.city}},{{order.address.state}},{{order.address.zipCode}}
+                </h3>
+            </div>
+            <div id="div" style="font-weight: bolder;">
+                <p>Order Total Amount:</p>
+                <h3 style="font-weight: bolder;">{{order.totalAmount}}$</h3>
+            </div>
+            <p><a routerLink="">click here</a> to go to homepage</p>
+
+        </mat-card>
+    </div>
+    <div class="col-lg-3"></div>
+</div>

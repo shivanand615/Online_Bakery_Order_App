@@ -1,0 +1,23 @@
+<div id="form">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h1>Admin Login</h1>
+        <mat-form-field appearance="fill">
+            <mat-label>Admin Code</mat-label>
+            <input matInput placeholder="Enter Admin Code" type="text" formControlName="adminCode" />
+            <mat-icon matSuffix>badge</mat-icon>
+            <mat-error *ngIf="loginForm.get('adminCode')?.errors?.['required']">
+                Admin code is required
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" id="tag">
+            <mat-label>PassCode</mat-label>
+            <input matInput placeholder="Enter Pass Code" type="password" formControlName="passCode" />
+            <mat-icon matSuffix>key</mat-icon>
+            <mat-error *ngIf="loginForm.get('passCode')?.errors?.['required']">
+                Password is required
+            </mat-error>
+        </mat-form-field>
+        <button color="primary" [disabled]="!loginForm.valid" mat-raised-button type="submit">Login</button>
+        <p>If you are a customer <a href="">Click here</a></p>
+    </form>
+</div>

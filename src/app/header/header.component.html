@@ -1,0 +1,9 @@
+<div id="header" class="row">
+  <div id="icons">
+    <a id="home" *ngIf="loggedIn==false" (click)="homeView()" title="Home"><mat-icon>home</mat-icon></a>
+    <mat-icon *ngIf="loggedIn==false">list</mat-icon>
+    <mat-icon *ngIf="loggedIn==false">settings</mat-icon>
+    <mat-icon *ngIf="loggedIn==false" title="Hi Guest">person</mat-icon>
+    <mat-icon *ngIf="loggedIn==true" title="Log Out" (click)="openDialog()">logout</mat-icon>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav (click)="sidenav.close()"  #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="false">
+    <mat-nav-list>
+      <a mat-list-item routerLink="" ><span>Home</span><mat-icon>home</mat-icon></a>
+      <a mat-list-item href="#">Settings<mat-icon>settings</mat-icon></a>
+      <a mat-list-item href="#">Profile<mat-icon>person</mat-icon></a>
+      <a mat-list-item routerLink="login" ><button color="accent" mat-raised-button>Admin Login
+          <mat-icon>admin_panel_settings</mat-icon></button></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+        <div>
+          <button *ngIf="isLoggedIn==false" style="height: 100%;" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+          <span>Bake My Cake<mat-icon>cake</mat-icon></span>
+        </div>
+        <div>
+          <app-header class="col-12" [loggedIn]=isLoggedIn></app-header>
+        </div>
+      
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <div>
+      <router-outlet class="col-12" (activate)="onLoggedIn()"></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

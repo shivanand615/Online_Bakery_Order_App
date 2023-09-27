@@ -1,0 +1,28 @@
+#icons{
+    display: flex;
+    justify-content: end;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+mat-icon{
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+#home{
+    cursor: pointer;
+}
+
+
+
+

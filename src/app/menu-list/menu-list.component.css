@@ -1,0 +1,27 @@
+img{
+    width: 100%;
+    height: 400px;
+}
+
+.container {
+    height: 50px;
+    width: 100%;
+    color: red;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .scrolling-text {
+    position: absolute;
+    white-space: nowrap;
+    font-family: cursive;
+    font-size: x-large;
+    height: 100%;
+  }
+
+  * {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+
